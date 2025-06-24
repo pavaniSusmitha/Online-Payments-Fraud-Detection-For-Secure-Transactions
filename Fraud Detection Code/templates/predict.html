@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Online Payments Fraud Detection</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="navbar">
+        <a href="/">Home</a>
+        <a href="/predict">Predict</a>
+    </div>
+
+    <div class="predict-container">
+        <h1>Online Payments Fraud Detection</h1>
+        <form action="/submit" method="POST" class="form-style">
+            <label>Step</label>
+            <input type="text" name="step" placeholder="step: represents a unit of time where transaction occurred">
+
+            <label>Type</label>
+            <input type="text" name="type" placeholder="type of online transaction">
+
+            <label>Amount</label>
+            <input type="text" name="amount" placeholder="the amount of the transaction">
+
+            <label>OldbalanceOrg</label>
+            <input type="text" name="oldbalanceOrg" placeholder="balance before the transaction">
+
+            <label>NewbalanceOrig</label>
+            <input type="text" name="newbalanceOrig" placeholder="balance after the transaction">
+
+            <label>OldbalanceDest</label>
+            <input type="text" name="oldbalanceDest" placeholder="initial balance of recipient before the transaction">
+
+            <label>NewbalanceDest</label>
+            <input type="text" name="newbalanceDest" placeholder="the new balance of recipient after the transaction">
+
+            <button type="submit">Predict</button>
+        </form>
+    </div>
+</body>
+</html>
